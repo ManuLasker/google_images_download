@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.trimAutoWhitespace": true,
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
+    "editor.defaultFormatter": "ms-python.python"
+}
