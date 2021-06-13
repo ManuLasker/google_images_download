@@ -1,6 +1,6 @@
 from pathlib import Path
 from logger import raise_error, log_info
-from google_image import GoogleImage
+from google_image import Google
 
 
 def create_dir(directory_path: Path, verbose: bool = False) -> Path:
@@ -17,7 +17,7 @@ def create_dir(directory_path: Path, verbose: bool = False) -> Path:
 def check_chromedriver_file(chromedriver_file: Path) -> None:
     # Check if chrome driver execution binary file is good
     # using a mock webdriver execution headless mode :=)
-    google = GoogleImage(driver_path=chromedriver_file)
+    google = Google(driver_path=chromedriver_file)
     try:
         google.check()
     except Exception as error:
