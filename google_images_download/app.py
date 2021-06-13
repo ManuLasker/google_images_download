@@ -2,6 +2,7 @@ import typer
 from pathlib import Path
 from typing import List
 from logger import pretty_log_info, log_info
+from google_image import Google
 from parameters_callback import (
     image_directory_callback,
     chromedriver_directory_callback,
@@ -41,4 +42,9 @@ def main(
         }
     )
 
-    # scrap images now:
+    # search just one
+    for image_name in image_names:
+        google = Google(chromedriver_directory / "chromedriver")
+        images_link = google.search(image_name)
+    # finish scrapping src of img tag in google image search!
+    # TODO: Save base64 images source, download image url and save it!
